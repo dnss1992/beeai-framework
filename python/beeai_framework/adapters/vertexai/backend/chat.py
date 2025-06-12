@@ -15,6 +15,13 @@
 
 import os
 
+try:
+    import google.auth  # type: ignore
+except ModuleNotFoundError as e:
+    raise ModuleNotFoundError(
+        "Optional module [vertexai] not found.\nRun 'pip install \"beeai-framework[vertexai]\"' to install."
+    ) from e
+
 from typing_extensions import Unpack
 
 from beeai_framework.adapters.litellm import utils

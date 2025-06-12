@@ -1,3 +1,9 @@
+## python_v0.1.24 (2025-06-05)
+
+### Bug Fixes
+
+- **providers**: add extras for VertexAI and Amazon Bedrock
+
 ## python_v0.1.23 (2025-06-03)
 
 ### Bug Fixes
