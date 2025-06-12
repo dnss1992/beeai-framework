@@ -15,6 +15,13 @@
 
 import os
 
+try:
+    import boto3  # type: ignore
+except ModuleNotFoundError as e:
+    raise ModuleNotFoundError(
+        "Optional module [amazon-bedrock] not found.\nRun 'pip install \"beeai-framework[amazon-bedrock]\"' to install."
+    ) from e
+
 from typing_extensions import Unpack
 
 from beeai_framework.adapters.litellm import utils
